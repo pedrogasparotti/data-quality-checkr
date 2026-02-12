@@ -124,7 +124,7 @@ class DataQualityChecker:
         self._validate_column_exists(parent_df, parent_key)
         self._validate_column_exists(child_df, child_key)
 
-        parent_keys = parent_df[parent_key]
+        parent_keys = parent_df[parent_key].to_list()
         child_keys = child_df[child_key]
         result = child_keys.is_in(parent_keys).all()
 
