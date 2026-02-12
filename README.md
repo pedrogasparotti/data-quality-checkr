@@ -56,6 +56,59 @@ Each check:
 - Logs the result to SQLite with timestamp and context
 - Raises `ValueError` if the column doesn't exist
 
+## CLI Usage
+
+Install and run checks from the command line with a YAML config file:
+
+```bash
+# Install
+uv add data-quality-checker
+
+# Run checks against a data file
+dqc check data.csv --config checks.yml
+
+# View logged results
+dqc logs validation_logs.db
+```
+
+### YAML Config Format
+
+```yaml
+# checks.yml
+db: validation_logs.db
+
+checks:
+  - type: not_null
+    column: uuid_inventario
+
+  - type: unique
+    column: uuid_inventario
+
+  - type: accepted_values
+    column: occurrence_type
+    values:
+      - "Monitoração de Drenagem Profunda"
+      - "Monitoração de OAE"
+```
+
+### Supported Check Types
+
+| YAML `type` | Method | Extra Fields |
+|-------------|--------|--------------|
+| `not_null` | `is_column_not_null()` | `column` |
+| `unique` | `is_column_unique()` | `column` |
+| `accepted_values` | `is_column_enum()` | `column`, `values` |
+
+### Supported File Formats
+
+- `.csv` — loaded with `polars.read_csv()`
+- `.parquet` — loaded with `polars.read_parquet()`
+
+### Exit Codes
+
+- `0` — all checks passed
+- `1` — one or more checks failed, or an error occurred
+
 ## API Reference
 
 ### `DBConnector(db_path)`
