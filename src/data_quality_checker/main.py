@@ -14,7 +14,12 @@ class DataQualityChecker:
         Args:
             db_connector: DBConnector instance for logging results.
         """
-        pass
+        self.db_connector = db_connector
+
+    def _validate_column_exists(self, df: pl.DataFrame, column: str) -> None:
+        """Raise ValueError if column is not in DataFrame."""
+        if column not in df.columns:
+            raise ValueError(f"Column '{column}' not found in DataFrame")
 
     def is_column_unique(self, df: pl.DataFrame, column: str) -> bool:
         """
@@ -30,7 +35,14 @@ class DataQualityChecker:
         Raises:
             ValueError: If column doesn't exist in DataFrame.
         """
-        pass
+        self._validate_column_exists(df, column)
+        result = df[column].is_duplicated().sum() == 0
+        self.db_connector.log(
+            check_type="unique",
+            result=result,
+            additional_params={"column": column},
+        )
+        return result
 
     def is_column_not_null(self, df: pl.DataFrame, column: str) -> bool:
         """
@@ -46,7 +58,14 @@ class DataQualityChecker:
         Raises:
             ValueError: If column doesn't exist in DataFrame.
         """
-        pass
+        self._validate_column_exists(df, column)
+        result = df[column].null_count() == 0
+        self.db_connector.log(
+            check_type="not_null",
+            result=result,
+            additional_params={"column": column},
+        )
+        return result
 
     def is_column_enum(
         self,
@@ -68,7 +87,17 @@ class DataQualityChecker:
         Raises:
             ValueError: If column doesn't exist in DataFrame.
         """
-        pass
+        self._validate_column_exists(df, column)
+        result = df[column].is_in(accepted_values).all()
+        self.db_connector.log(
+            check_type="accepted_values",
+            result=result,
+            additional_params={
+                "column": column,
+                "accepted_values": accepted_values,
+            },
+        )
+        return result
 
     def are_tables_referential_integral(
         self,
@@ -92,4 +121,19 @@ class DataQualityChecker:
         Raises:
             ValueError: If key column doesn't exist in respective DataFrame.
         """
-        pass
+        self._validate_column_exists(parent_df, parent_key)
+        self._validate_column_exists(child_df, child_key)
+
+        parent_keys = parent_df[parent_key]
+        child_keys = child_df[child_key]
+        result = child_keys.is_in(parent_keys).all()
+
+        self.db_connector.log(
+            check_type="referential_integrity",
+            result=result,
+            additional_params={
+                "parent_key": parent_key,
+                "child_key": child_key,
+            },
+        )
+        return result
