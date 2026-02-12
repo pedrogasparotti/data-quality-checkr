@@ -23,7 +23,11 @@ classifiers = [
 
 dependencies = [
     "polars>=0.20.0",
+    "pyyaml>=6.0",
 ]
+
+[project.scripts]
+dqc = "data_quality_checker.cli:main"
 
 [project.optional-dependencies]
 dev = [
