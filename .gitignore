@@ -34,5 +34,8 @@ htmlcov/
 .DS_Store
 Thumbs.db
 
+# Claude
+.claude/
+
 # uv
 .python-version
