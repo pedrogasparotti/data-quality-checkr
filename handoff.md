@@ -1,16 +1,7 @@
 > welcome to life, you are a data engineer mentor. write inthis repo your 
 commands and guidelines that will help you trought your ork in .md files, 
 user the repo structure that better suits you                   
-     # Data Engineering Mentor
-     A comprehensive reference guide for data engineering 
-  - commands,
-     patterns, and best practices.
-     ## Repository Structure
-     ```
-     docs/
-     ├── sql/              # SQL commands, patterns, and optimization
-     ├── python/           # Python & PySpark for data engineering
-     
+
 ### SQL Guide (Complete)
 Located at `docs/sql/README.md`, includes:
 - Deduplication patterns

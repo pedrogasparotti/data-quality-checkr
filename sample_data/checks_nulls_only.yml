@@ -1,0 +1,10 @@
+checks:
+- column: uuid_inventario
+  type: not_null
+- column: occurrence_type
+  type: not_null
+- column: target_name
+  type: not_null
+- column: next_state_prediction
+  type: not_null
+db: sample_data/validation_results.db

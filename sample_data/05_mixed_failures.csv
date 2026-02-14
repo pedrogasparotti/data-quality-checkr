@@ -1,0 +1,9 @@
+uuid_inventario,occurrence_type,target_name,next_state_prediction
+INV-0001,Monitoração de Drenagem Profunda,Bridge A,stable
+INV-0002,,Bridge B,degrading
+INV-0001,Monitoração de Sinalização Horizontal - Longitudinal e Tachas,,improving
+,Monitoração de Sinalização Horizontal - Marcas Viárias,Dam D,
+INV-0005,Tipo Desconhecido,Road E,stable
+INV-0006,Monitoração de Sinalização Vertical,Sign F,critical
+INV-0007,Monitoração de Terraplenos e Estruturas de Contenção,Wall G,
+INV-0008,Monitoração de Drenagem Profunda,Bridge H,degrading

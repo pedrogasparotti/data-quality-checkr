@@ -3,7 +3,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "data-quality-checker"
+name = "data-quality-checker-pg"
 version = "0.1.0"
 description = "Validate Polars DataFrames and log results to SQLite"
 readme = "README.md"
@@ -35,6 +35,9 @@ dev = [
     "pytest-cov>=4.0",
     "pytest-mock>=3.0",
 ]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/data_quality_checker"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

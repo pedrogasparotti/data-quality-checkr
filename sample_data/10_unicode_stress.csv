@@ -1,0 +1,9 @@
+uuid_inventario,occurrence_type,target_name,next_state_prediction
+INV-0001,Monitoração de OAE,Ponte São João,stable
+INV-0002,Monitoração de Sinalização Vertical,Túnel Ipê-Amarelo,degrading
+INV-0003,Monitoração de Drenagem Profunda,Barragem Itaúna,improving
+INV-0004,Monitoração de Terraplenos e Estruturas de Contenção,Rodovia BR-101,critical
+INV-0005,Monitoraçao de OAE,"Sinalização km 42,5",stable
+INV-0006,Monitoração  de OAE,Muro Nº 7,degrading
+INV-0007,monitoração de oae,Contenção — Setor B,improving
+INV-0008, Monitoração de OAE,Drenagem (Trecho 3/A),critical

@@ -1,0 +1,11 @@
+uuid_inventario,occurrence_type,target_name,next_state_prediction
+001,Monitoração de Drenagem Profunda,0,stable
+002,Monitoração de OAE,1,degrading
+003,Monitoração de Sinalização Horizontal - Longitudinal e Tachas,true,improving
+004,Monitoração de Sinalização Horizontal - Marcas Viárias,false,critical
+005,Monitoração de Sinalização Horizontal - Zebrados,None,stable
+006,Monitoração de Sinalização Vertical,null,degrading
+007,Monitoração de Terraplenos e Estruturas de Contenção,NaN,improving
+008,Monitoração de Drenagem Profunda,inf,critical
+009,Monitoração de OAE,-1,stable
+010,Monitoração de Sinalização Horizontal - Longitudinal e Tachas,3.14,degrading

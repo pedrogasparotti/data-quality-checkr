@@ -1,0 +1,25 @@
+db: validation_logs.db
+
+checks:
+  - type: not_null
+    column: uuid_inventario
+
+  - type: not_null
+    column: occurrence_type
+
+  - type: not_null
+    column: target_name
+
+  - type: not_null
+    column: next_state_prediction
+
+  - type: accepted_values
+    column: occurrence_type
+    values:
+      - "Monitoração de Drenagem Profunda"
+      - "Monitoração de OAE"
+      - "Monitoração de Sinalização Horizontal - Longitudinal e Tachas"
+      - "Monitoração de Sinalização Horizontal - Marcas Viárias"
+      - "Monitoração de Sinalização Horizontal - Zebrados"
+      - "Monitoração de Sinalização Vertical"
+      - "Monitoração de Terraplenos e Estruturas de Contenção"

@@ -1,0 +1,12 @@
+checks:
+- column: occurrence_type
+  type: accepted_values
+  values:
+  - Monitoração de Drenagem Profunda
+  - Monitoração de OAE
+  - Monitoração de Sinalização Horizontal - Longitudinal e Tachas
+  - Monitoração de Sinalização Horizontal - Marcas Viárias
+  - Monitoração de Sinalização Horizontal - Zebrados
+  - Monitoração de Sinalização Vertical
+  - Monitoração de Terraplenos e Estruturas de Contenção
+db: sample_data/validation_results.db

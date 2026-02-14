@@ -1,0 +1,4 @@
+checks:
+- column: uuid_inventario
+  type: unique
+db: sample_data/validation_results.db

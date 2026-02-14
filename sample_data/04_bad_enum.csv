@@ -1,0 +1,13 @@
+uuid_inventario,occurrence_type,target_name,next_state_prediction
+INV-0001,Monitoração de Drenagem Profunda,Target_1,stable
+INV-0002,Monitoração de OAE,Target_2,degrading
+INV-0003,Inspeção Visual,Target_3,improving
+INV-0004,Monitoração de Sinalização Horizontal - Marcas Viárias,Target_4,critical
+INV-0005,Manutenção Corretiva,Target_5,stable
+INV-0006,Monitoração de Sinalização Vertical,Target_6,degrading
+INV-0007,Monitoração de Terraplenos e Estruturas de Contenção,Target_7,improving
+INV-0008,Reparo Emergencial,Target_8,critical
+INV-0009,Monitoração de Drenagem Profunda,Target_9,stable
+INV-0010,Monitoração de OAE,Target_10,degrading
+INV-0011,"",Target_11,improving
+INV-0012,Monitoração de Sinalização Horizontal - Longitudinal e Tachas,Target_12,critical

@@ -1,0 +1,21 @@
+uuid_inventario,occurrence_type,target_name,next_state_prediction
+INV-0001,Monitoração de Drenagem Profunda,Bridge Alpha,stable
+INV-0002,Monitoração de OAE,Bridge Beta,degrading
+INV-0003,Monitoração de Sinalização Horizontal - Longitudinal e Tachas,Tunnel Gamma,improving
+INV-0004,Monitoração de Sinalização Horizontal - Marcas Viárias,Dam Delta,critical
+INV-0005,Monitoração de Sinalização Horizontal - Zebrados,Road Epsilon,stable
+INV-0006,Monitoração de Sinalização Vertical,Sign Zeta,degrading
+INV-0007,Monitoração de Terraplenos e Estruturas de Contenção,Wall Eta,improving
+INV-0008,Monitoração de Drenagem Profunda,Bridge Theta,critical
+INV-0009,Monitoração de OAE,Tunnel Iota,stable
+INV-0010,Monitoração de Sinalização Horizontal - Longitudinal e Tachas,Dam Kappa,degrading
+INV-0011,Monitoração de Sinalização Horizontal - Marcas Viárias,Road Lambda,improving
+INV-0012,Monitoração de Sinalização Horizontal - Zebrados,Sign Mu,critical
+INV-0013,Monitoração de Sinalização Vertical,Wall Nu,stable
+INV-0014,Monitoração de Terraplenos e Estruturas de Contenção,Bridge Xi,degrading
+INV-0015,Monitoração de Drenagem Profunda,Tunnel Omicron,improving
+INV-0016,Monitoração de OAE,Dam Pi,critical
+INV-0017,Monitoração de Sinalização Horizontal - Longitudinal e Tachas,Road Rho,stable
+INV-0018,Monitoração de Sinalização Horizontal - Marcas Viárias,Sign Sigma,degrading
+INV-0019,Monitoração de Sinalização Horizontal - Zebrados,Wall Tau,improving
+INV-0020,Monitoração de Sinalização Vertical,Bridge Upsilon,critical
