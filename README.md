@@ -7,13 +7,13 @@ A lightweight Python library for data engineers who need to validate pipeline da
 ## Installation
 
 ```bash
-pip install data-quality-checker
+pip install data-quality-checker-pg
 ```
 
 Or with [uv](https://github.com/astral-sh/uv):
 
 ```bash
-uv add data-quality-checker
+uv add data-quality-checker-pg
 ```
 
 ## Quick Start
@@ -62,7 +62,7 @@ Install and run checks from the command line with a YAML config file:
 
 ```bash
 # Install
-uv add data-quality-checker
+uv add data-quality-checker-pg
 
 # Run checks against a data file
 dqc check data.csv --config checks.yml
